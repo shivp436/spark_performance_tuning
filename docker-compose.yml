@@ -1,0 +1,14 @@
+services:
+  jupyter-spark:
+    image: jupyter/all-spark-notebook:spark-3.5.0
+    container_name: jupyter-spark
+    ports:
+      - "8888:8888"  # Jupyter
+      - "4040:4040"  # Spark UI
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./data:/home/jovyan/data
+      - ./jobs:/home/jovyan/jobs
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''

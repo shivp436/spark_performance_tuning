@@ -1,0 +1,19 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Data files (usually you don't commit large data files)
+data/
+
+.log
